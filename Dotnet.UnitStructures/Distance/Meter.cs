@@ -11,6 +11,11 @@
 		public static Meter operator +(Meter term, Centimeter addend) => term + (Meter)addend;
 		public static Meter operator +(Meter term, Kilometer addend) => term + (Meter)addend;
 
+		public static Meter operator -(Meter term, Meter subend) => new Meter(term.Value - subend.Value);
+		public static Meter operator -(Meter term, Millimeter subend) => term - (Meter)subend;
+		public static Meter operator -(Meter term, Centimeter subend) => term - (Meter)subend;
+		public static Meter operator -(Meter term, Kilometer subend) => term - (Meter)subend;
+
 		public static implicit operator Meter(double v) => new Meter(v);
 		public static implicit operator Meter(Millimeter v) => new Meter(v.Value / 1000.0);
 		public static implicit operator Meter(Centimeter v) => new Meter(v.Value / 100.0);

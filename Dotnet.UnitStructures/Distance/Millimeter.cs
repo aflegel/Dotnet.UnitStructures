@@ -11,6 +11,11 @@
 		public static Millimeter operator +(Millimeter term, Kilometer addend) => term + (Millimeter)addend;
 		public static Millimeter operator +(Millimeter term, Millimeter addend) => new Millimeter(term.Value + addend.Value);
 
+		public static Millimeter operator -(Millimeter term, Centimeter subend) => term - (Millimeter)subend;
+		public static Millimeter operator -(Millimeter term, Meter subend) => term - (Millimeter)subend;
+		public static Millimeter operator -(Millimeter term, Kilometer subend) => term - (Millimeter)subend;
+		public static Millimeter operator -(Millimeter term, Millimeter subend) => new Millimeter(term.Value - subend.Value);
+
 		public static implicit operator Millimeter(double v) => new Millimeter(v);
 		public static implicit operator Millimeter(Meter v) => new Millimeter(v.Value * 1000.0);
 		public static implicit operator Millimeter(Centimeter v) => (Meter)v;

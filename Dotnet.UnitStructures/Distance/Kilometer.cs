@@ -11,6 +11,11 @@
 		public static Kilometer operator +(Kilometer term, Meter addend) => term + (Kilometer)addend;
 		public static Kilometer operator +(Kilometer term, Kilometer addend) => new Kilometer(term.Value + addend.Value);
 
+		public static Kilometer operator -(Kilometer term, Millimeter subend) => term - (Kilometer)subend;
+		public static Kilometer operator -(Kilometer term, Centimeter subend) => term - (Kilometer)subend;
+		public static Kilometer operator -(Kilometer term, Meter subend) => term - (Kilometer)subend;
+		public static Kilometer operator -(Kilometer term, Kilometer subend) => new Kilometer(term.Value - subend.Value);
+
 		public static implicit operator Kilometer(double v) => new Kilometer(v);
 		public static implicit operator Kilometer(Millimeter v) => (Meter)v;
 		public static implicit operator Kilometer(Centimeter v) => (Meter)v;

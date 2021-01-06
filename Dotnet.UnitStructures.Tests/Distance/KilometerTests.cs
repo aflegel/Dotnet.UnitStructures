@@ -38,7 +38,7 @@ namespace Dotnet.UnitStructures.Tests.Distance
 		}
 
 		[Fact]
-		public void SumTest()
+		public void AdditionTest()
 		{
 			Kilometer a = 20;
 			Kilometer b = 30;
@@ -46,6 +46,39 @@ namespace Dotnet.UnitStructures.Tests.Distance
 			var sum = a + b;
 
 			sum.Value.Should().Be(50.0);
+		}
+
+		[Fact]
+		public void AdditionMeterTest()
+		{
+			Kilometer a = 20;
+			Meter b = 30;
+
+			var sum = a + b;
+
+			sum.Value.Should().Be(20.03);
+		}
+
+		[Fact]
+		public void SubtractionTest()
+		{
+			Kilometer a = 20;
+			Kilometer b = 30;
+
+			var sum = a - b;
+
+			sum.Value.Should().Be(-10);
+		}
+
+		[Fact]
+		public void SubtractionMeterTest()
+		{
+			Kilometer a = 20;
+			Meter b = 30;
+
+			var sum = a - b;
+
+			sum.Value.Should().Be(19.97);
 		}
 	}
 }

@@ -41,7 +41,7 @@ namespace Dotnet.UnitStructures.Tests.Distance
 		}
 
 		[Fact]
-		public void SumTest()
+		public void AdditionTest()
 		{
 			Meter a = 20;
 			Meter b = 30;
@@ -52,7 +52,7 @@ namespace Dotnet.UnitStructures.Tests.Distance
 		}
 
 		[Fact]
-		public void SumMillimeterTest()
+		public void AdditionMillimeterTest()
 		{
 			Meter a = 20;
 			Millimeter b = 300;
@@ -63,7 +63,7 @@ namespace Dotnet.UnitStructures.Tests.Distance
 		}
 
 		[Fact]
-		public void SumCentimeterTest()
+		public void AdditionCentimeterTest()
 		{
 			Meter a = 20;
 			Centimeter b = 300;
@@ -71,6 +71,39 @@ namespace Dotnet.UnitStructures.Tests.Distance
 			var sum = a + b;
 
 			sum.Value.Should().Be(23);
+		}
+
+		[Fact]
+		public void SubtractionTest()
+		{
+			Meter a = 20;
+			Meter b = 30;
+
+			var sum = a - b;
+
+			sum.Value.Should().Be(-10);
+		}
+
+		[Fact]
+		public void SubtractionCentimeterTest()
+		{
+			Meter a = 20;
+			Centimeter b = 30;
+
+			var sum = a - b;
+
+			sum.Value.Should().Be(19.7);
+		}
+
+		[Fact]
+		public void SubtractionMilliimeterTest()
+		{
+			Meter a = 20;
+			Millimeter b = 30;
+
+			var sum = a - b;
+
+			sum.Value.Should().Be(19.97);
 		}
 	}
 }
